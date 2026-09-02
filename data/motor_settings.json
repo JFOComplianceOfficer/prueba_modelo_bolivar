@@ -1,0 +1,39 @@
+{
+  "version_motor": "0.6",
+  "descripcion": "Configuración TÉCNICA del motor. No editar a mano salvo que se sepa exactamente qué se está cambiando. Los parámetros que sí debe tocar un consultor o cliente viven en config_matriz_riesgos.xlsx.",
+  "denominador_eficacia_control": 15,
+  "redondeo_decimales": 6,
+  "importacion_legado": {
+    "descripcion": "Mapeo de columnas (0-indexed, pandas, header=None) para importar la matriz Excel original de Inter Rapidísimo usada en la prueba de paridad. Uso interno de migración; no aplica a la caracterización de nuevos clientes.",
+    "archivo_referencia": "MATRIZ_DE_RIESGOS_VERSION_FINAL.xlsx",
+    "hoja": "MATRIZ PROPUESTA",
+    "fila_inicio_datos_skiprows": 7,
+    "columnas": {
+      "7": "codigo",
+      "12": "descripcion_texto",
+      "27": "categoria_texto",
+      "30": "frecuencia",
+      "31": "calif_prob",
+      "34": "normativo",
+      "36": "legal",
+      "38": "economico",
+      "40": "liquidez",
+      "42": "reputacional",
+      "44": "operacional",
+      "46": "contagio",
+      "51": "clasif_inherente_excel",
+      "59": "ctrl_tipo",
+      "60": "ctrl_auto",
+      "61": "ctrl_doc",
+      "62": "ctrl_period",
+      "71": "prob_res_excel",
+      "72": "imp_res_excel",
+      "73": "severidad_excel"
+    }
+  },
+  "prueba_de_paridad": {
+    "resultado_certificado": "142/142 (100%)",
+    "fecha_certificacion": "2026-08-12",
+    "riesgos_excluidos": ["R39 — sin calificación de impacto legal en el Excel de origen"]
+  }
+}
